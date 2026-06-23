@@ -1,0 +1,26 @@
+[project]
+name = "edgecrafter"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "calflops>=0.3.2",
+  "pycocotools>=2.0.11",
+  "pyyaml>=6.0.3",
+  "scipy>=1.18.0",
+  "tensorboard>=2.20.0",
+  "transformers[torch,vision]>=5.12.1",
+]
+dynamic = ["version"]
+
+[build-system]
+requires = ["setuptools>=80", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+  "ecdetseg*",
+  "ecpose*",
+]
+namespaces = false
